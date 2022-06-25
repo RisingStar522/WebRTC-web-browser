@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0px;
+}
+
+.svg-container {
+  width: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none; 
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Background */
+
+:root{
+  --orbit: 1rem;
+  --dia: calc((var(--orbit)/2) * -1);
+  --mercury_o: 1;
+  --mercury_orbit: calc(var(--orbit) * var(--mercury_o));
+  --mercury_dia: calc(var(--dia) * var(--mercury_o));
+  --venus_o: 2.1;
+  --venus_orbit: calc(var(--orbit) * var(--venus_o));
+  --venus_dia: calc(var(--dia) * var(--venus_o));
+  --earth_o: 3.75;
+  --earth_orbit: calc(var(--orbit) * var(--earth_o));
+  --earth_dia: calc(var(--dia) * var(--earth_o));
+  --mars_o: 5.2;
+  --mars_orbit: calc(var(--orbit) * var(--mars_o));
+  --mars_dia: calc(var(--dia) * var(--mars_o));
+  --jupiter_o: 18;
+  --jupiter_orbit: calc(var(--orbit) * var(--jupiter_o));
+  --jupiter_dia: calc(var(--dia) * var(--jupiter_o));
+  --saturn_o: 32;
+  --saturn_orbit: calc(var(--orbit) * var(--saturn_o));
+  --saturn_dia: calc(var(--dia) * var(--saturn_o));
+  --uranus_o: 65;
+  --uranus_orbit: calc(var(--orbit) * var(--uranus_o));
+  --uranus_dia: calc(var(--dia) * var(--uranus_o));
+  --neptune_o: 100;
+  --neptune_orbit: calc(var(--orbit) * var(--neptune_o));
+  --neptune_dia: calc(var(--dia) * var(--neptune_o));
+}  
+
+body {
+  background-color: white;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background-color: whiateblue;
+  }
+
+  #mobile {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+/* 
+  #desktop {
+    display: none;
+  }
+
+  #tv {
+    display: none;
+  } */
+   
+  .remote-meeting {
+    /* height: 30vh;
+    width: auto; */
+    margin-top: 3vh;
+  }
+/* 
+  img {
+    width: 50%;
+  } */
+
+  .title {
+    font-family: 'Roboto';
+    margin-top: 2vh;
+  }
+
+  .subtitle {
+    font-family: 'Roboto';
+    margin-top: 0.5vh;
+  }
+   
+  .button-group {
+    /* margin-top: 8vh; */
+  }
+
+  .new-meeting {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: #3343F8;
+    width: 300px;
+    border: none;
+    /* margin-top: 4vh; */
+  }
+
+  label {
+    margin-top: 8vh;
+  }
+
+  input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .join-meeting {
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    width: 300px;
+    padding: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 1919px) {
+  /* #mobile {
+    display: none;
+  } */
+  
+  #desktop {
+    display: block;
+    background-color: #3343F8;
+  }
+/* 
+  #tv {
+    display: none;
+  } */
+
+  .text-yellow {
+    color: #FCD41B
+  }
+
+  input {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  /* #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: none;
+  } */
+
+  #tv {
+    
+  }
+
+
+}
+

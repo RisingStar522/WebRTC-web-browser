@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import QRCode from "react-qr-code";
 import { isMobileOnly, isTablet, isBrowser, isSmartTV, browserName, mobileVendor, mobileModel } from 'react-device-detect';
 
@@ -13,11 +13,12 @@ import "./styles.css";
 
 export default function App() {
 
-  const [url, setURL] = useState("https://me.at/123456789");
+  // const [url, setURL] = useState("https://me.at/123456789");
+  const url = "https://me.at/123456789";
   
-  const onAfterChange = (val) => {
+ //  const onAfterChange = (val) => {
     
-	};
+	// };
 
   useEffect(() => {
     console.log(isMobileOnly, ' ', isTablet, ' ', isBrowser, ' ', isSmartTV);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import QRCode from "react-qr-code";
 import { isMobileOnly, isTablet, isBrowser, isSmartTV, browserName, mobileVendor, mobileModel } from 'react-device-detect';
 

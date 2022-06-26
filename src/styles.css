@@ -73,10 +73,60 @@ body {
   background-color: white;
 }
 
-@media only screen and (max-width: 425px) {
-  body {
-    background-color: whiateblue;
+@media only screen and (max-width: 280px) {
+  #mobile {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
+   
+  .remote-meeting {
+    margin-top: 3vh;
+  }
+
+  .title {
+    font-family: 'Roboto';
+  }
+
+  .subtitle {
+    font-family: 'Roboto';
+    margin-top: 0.5vh;
+  }
+
+  .new-meeting {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: #3343F8;
+    width: 270px;
+    border: none;
+  }
+
+  label {
+    width: 270px;
+  }
+
+  input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px !important;
+  }
+
+  .join-meeting {
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    width: 270px;
+    padding: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 281px) and (max-width: 425px) {
 
   #mobile {
     display: block;
@@ -85,37 +135,18 @@ body {
     justify-content: center;
     margin: 0 auto;
   }
-/* 
-  #desktop {
-    display: none;
-  }
-
-  #tv {
-    display: none;
-  } */
    
   .remote-meeting {
-    /* height: 30vh;
-    width: auto; */
     margin-top: 3vh;
   }
-/* 
-  img {
-    width: 50%;
-  } */
 
   .title {
     font-family: 'Roboto';
-    margin-top: 2vh;
   }
 
   .subtitle {
     font-family: 'Roboto';
     margin-top: 0.5vh;
-  }
-   
-  .button-group {
-    /* margin-top: 8vh; */
   }
 
   .new-meeting {
@@ -125,11 +156,11 @@ body {
     color: #3343F8;
     width: 300px;
     border: none;
-    /* margin-top: 4vh; */
+    padding-left: 28px
   }
 
   label {
-    margin-top: 8vh;
+    width: 300px;
   }
 
   input::placeholder {
@@ -147,19 +178,125 @@ body {
   }
 }
 
-@media only screen and (min-width: 426px) and (max-width: 1919px) {
-  /* #mobile {
-    display: none;
-  } */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+  #tablet {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: 'Roboto';
+  }
+
+  .subtitle {
+    font-family: 'Roboto';
+    margin-top: 0.5vh;
+  }
+   
+  .new-meeting {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: #3343F8;
+    width: 480px;
+    border: none;
+  }
+
+  label {
+    width: 480px;
+  }
+
+  input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 84px;
+  }
+
+  .join-meeting {
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    width: 480px;
+    padding: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1180px) {
+  #desktop {
+    display: flex;
+    justify-content: center;
+    background-color: #3343F8;
+    width: 769px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  .connect {
+    width: 350px !important;
+  }
+
+  video {
+    width: 350px !important;
+    margin-right: 20px;
+  }
+
+  .text-yellow {
+    color: #FCD41B
+  }
+
+  .otp-text {
+    font-size: 24px !important;
+  }
+
+  input {
+    font-size: 32px !important;
+    background:#FCD41B;
+    border-spacing: 2px;
+    border-radius: 4px;
+    margin-right: 6px;
+    color: #3343F8 !important;
+    font-weight: 700;
+    
+  }
+
+  .otp-input {
+    margin-right: 1px;
+  }
+
+  .otp-input:nth-child(3) {
+    margin-right: 10px;
+  }
+
+  .otp-input:nth-child(6) {
+    margin-right: 10px;
+  }
+
+  .otp-generator {
+    width: 80%
+  }
+}
+
+@media only screen and (min-width: 1181px) and (max-width: 1439px) {
   
   #desktop {
-    display: block;
+    display: flex;
+    justify-content: center;
     background-color: #3343F8;
+    width: 1181px;
+    margin: 0 auto;
+    padding-left: 20px;
   }
-/* 
-  #tv {
-    display: none;
-  } */
+
+  video {
+    margin-right: 20px;
+  }
 
   .text-yellow {
     color: #FCD41B
@@ -167,22 +304,86 @@ body {
 
   input {
     font-size: 60px;
+    background:#FCD41B;
+    border-spacing: 2px;
+    border-radius: 4px;
+    margin-right: 6px;
+    color: #3343F8 !important;
+    font-weight: 700;
+  }
+
+  .otp-input {
+    margin-right: 1px;
+  }
+
+  .otp-input:nth-child(3) {
+    margin-right: 10px;
+  }
+
+  .otp-input:nth-child(6) {
+    margin-right: 10px;
+  }
+
+  .otp-generator {
+    width: 80%
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+  
+  #desktop {
+    display: flex;
+    justify-content: center;
+    background-color: #3343F8;
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 90px;
+  }
+
+  video {
+    margin-right: 132px;
+  }
+
+  .text-yellow {
+    color: #FCD41B
+  }
+
+  input {
+    font-size: 60px;
+    background:#FCD41B;
+    border-spacing: 2px;
+    border-radius: 4px;
+    margin-right: 6px;
+    color: #3343F8 !important;
+    font-weight: 700;
+  }
+
+  .otp-input {
+    margin-right: 3px;
+  }
+
+  .otp-input:nth-child(3) {
+    margin-right: 24px;
+  }
+
+  .otp-input:nth-child(6) {
+    margin-right: 24px;
+  }
+
+  .otp-generator {
+    width: 80%
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  /* #mobile {
-    display: none;
-  }
-
   #desktop {
     display: none;
-  } */
-
-  #tv {
-    
   }
 
-
+  #tv {
+    display: flex;
+    justify-content: center;
+    background-color: #3343F8;
+  }
 }
 

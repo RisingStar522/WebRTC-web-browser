@@ -23,7 +23,7 @@ export default function App() {
   let mt2 = parseInt(height * 0.001);
   let mt4 = parseInt(height * 0.03);
   let mt5 = parseInt(height * 0.1);
-  let mt6 = parseInt(height * 0.02);
+//  let mt6 = parseInt(height * 0.02);
   let height1 = parseInt(height * 0.3);
 
   const [otp, setOTP] = useState("");

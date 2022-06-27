@@ -16,7 +16,7 @@ export default function App() {
 
   const url = "https://me.at/123456789";
   const video = "https://me-at-bucket-s3.s3.eu-central-1.amazonaws.com/me_homepage_4K.mp4"
-  const { height, width } = useWindowDimensions();
+  const { height } = useWindowDimensions();
 
   let mt1 = parseInt(height * 0.06);
   let mt2 = parseInt(height * 0.001);
@@ -34,8 +34,8 @@ export default function App() {
 
   useEffect(() => {
     setFocusValue(false)
-    console.log('width = ', width, ' height = ', height);
-    console.log('mobile = ', isMobileOnly, ' tablet = ', isTablet, '  desktop = ', isBrowser, ' tv = ', isSmartTV);
+    // console.log('width = ', width, ' height = ', height);
+    // console.log('mobile = ', isMobileOnly, ' tablet = ', isTablet, '  desktop = ', isBrowser, ' tv = ', isSmartTV);
   }, []);
 
   if ( isMobileOnly )

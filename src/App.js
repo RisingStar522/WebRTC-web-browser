@@ -9,40 +9,34 @@ import add_meeting from './assets/img/addmeet.svg'
 import connect from './assets/img/connect.svg'
 import mirror_url_src from './assets/img/mirror_url_src.png'
 import qr_code_src from './assets/img/qr_code_src.png'
-import video from './assets/video/video.mp4'
 
 import "./styles.css";
 
 export default function App() {
 
-  // const [url, setURL] = useState("https://me.at/123456789");
   const url = "https://me.at/123456789";
+  const video = "https://me-at-bucket-s3.s3.eu-central-1.amazonaws.com/me_homepage_4K.mp4"
   const { height, width } = useWindowDimensions();
 
   let mt1 = parseInt(height * 0.06);
   let mt2 = parseInt(height * 0.001);
-  let mt4 = parseInt(height * 0.03);
-  let mt5 = parseInt(height * 0.1);
-//  let mt6 = parseInt(height * 0.02);
+  let mt3 = parseInt(height * 0.03);
+  let mt4 = parseInt(height * 0.1);
   let height1 = parseInt(height * 0.3);
 
   const [otp, setOTP] = useState("");
+  const [focusValue, setFocusValue] = useState(true)
 
   function handleChange(otp) {
     setOTP(otp)
+    console.log('focus = ', focusValue)
   }
 
   useEffect(() => {
-    if ( isBrowser )
-      document.querySelector(".otp-input > input").focus();
-      // window.onload = function() {
-      //   document.querySelector(".otp-input").focus();
-      //   console.log('here')
-      // }
-
+    setFocusValue(false)
     console.log('width = ', width, ' height = ', height);
     console.log('mobile = ', isMobileOnly, ' tablet = ', isTablet, '  desktop = ', isBrowser, ' tv = ', isSmartTV);
-  });
+  }, []);
 
   if ( isMobileOnly )
     return (
@@ -57,11 +51,11 @@ export default function App() {
             <p className="text-center font-normal text-[24px] leading-7 text-[#3343F8] subtitle">phone and TV</p>
           </div>
           <div className="flex flex-col button-group items-center justify-center">
-            <button className="flex items-center bg-yellow-300 hover:bg-yellow-400 rounded-xl text-[24px] leading-6 my-auto  py-4 new-meeting" style={{marginTop: `${mt4}px`}}>
+            <button className="flex items-center bg-yellow-300 hover:bg-yellow-400 rounded-xl text-[24px] leading-6 my-auto  py-4 new-meeting" style={{marginTop: `${mt3}px`}}>
               <img className="px-4" src={add_meeting} alt=""></img>
               NEW MEETING
             </button>
-            <label className="relative text-[20px] leading-6 block" style={{marginTop: `${mt5}px`}}>
+            <label className="relative text-[20px] leading-6 block" style={{marginTop: `${mt4}px`}}>
               <svg className="pointer-events-none w-8 h-8 absolute top-6 transform -translate-y-1/2 left-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_9_13)">
                 <path d="M24.5 8.75C24.9641 8.75 25.4092 8.93437 25.7374 9.26256C26.0656 9.59075 26.25 10.0359 26.25 10.5V19.25C26.25 19.7141 26.0656 20.1592 25.7374 20.4874C25.4092 20.8156 24.9641 21 24.5 21H3.5C3.03587 21 2.59075 20.8156 2.26256 20.4874C1.93437 20.1592 1.75 19.7141 1.75 19.25V10.5C1.75 10.0359 1.93437 9.59075 2.26256 9.26256C2.59075 8.93437 3.03587 8.75 3.5 8.75H24.5ZM3.5 7C2.57174 7 1.6815 7.36875 1.02513 8.02513C0.368749 8.6815 0 9.57174 0 10.5L0 19.25C0 20.1783 0.368749 21.0685 1.02513 21.7249C1.6815 22.3813 2.57174 22.75 3.5 22.75H24.5C25.4283 22.75 26.3185 22.3813 26.9749 21.7249C27.6313 21.0685 28 20.1783 28 19.25V10.5C28 9.57174 27.6313 8.6815 26.9749 8.02513C26.3185 7.36875 25.4283 7 24.5 7H3.5Z" fill="#3B3B3B" fillOpacity="0.5" />
@@ -96,11 +90,11 @@ export default function App() {
               <p className="text-center font-normal text-[24px] leading-7 text-[#3343F8] subtitle">phone and TV</p>
             </div>
             <div className="button-group items-center justify-center">
-              <button className="bg-yellow-300 hover:bg-yellow-400 rounded-xl text-[24px] leading-6 my-auto  py-4 new-meeting" style={{marginTop: `${mt4}px`}}>
+              <button className="bg-yellow-300 hover:bg-yellow-400 rounded-xl text-[24px] leading-6 my-auto  py-4 new-meeting" style={{marginTop: `${mt3}px`}}>
                 <img className="flex items-center mr-4 new-meeting-img" src={add_meeting} alt=""></img>
                 NEW MEETING
               </button>
-              <label className="relative text-[20px] leading-6 block" style={{marginTop: `${mt5}px`}}>
+              <label className="relative text-[20px] leading-6 block" style={{marginTop: `${mt4}px`}}>
                 <svg className="pointer-events-none w-8 h-8 absolute top-6 transform -translate-y-1/2 left-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_9_13)">
                   <path d="M24.5 8.75C24.9641 8.75 25.4092 8.93437 25.7374 9.26256C26.0656 9.59075 26.25 10.0359 26.25 10.5V19.25C26.25 19.7141 26.0656 20.1592 25.7374 20.4874C25.4092 20.8156 24.9641 21 24.5 21H3.5C3.03587 21 2.59075 20.8156 2.26256 20.4874C1.93437 20.1592 1.75 19.7141 1.75 19.25V10.5C1.75 10.0359 1.93437 9.59075 2.26256 9.26256C2.59075 8.93437 3.03587 8.75 3.5 8.75H24.5ZM3.5 7C2.57174 7 1.6815 7.36875 1.02513 8.02513C0.368749 8.6815 0 9.57174 0 10.5L0 19.25C0 20.1783 0.368749 21.0685 1.02513 21.7249C1.6815 22.3813 2.57174 22.75 3.5 22.75H24.5C25.4283 22.75 26.3185 22.3813 26.9749 21.7249C27.6313 21.0685 28 20.1783 28 19.25V10.5C28 9.57174 27.6313 8.6815 26.9749 8.02513C26.3185 7.36875 25.4283 7 24.5 7H3.5Z" fill="#3B3B3B" fillOpacity="0.5" />
@@ -147,7 +141,7 @@ export default function App() {
                     value={otp}
                     onChange={handleChange}
                     numInputs={9}
-                    shouldAutoFocus={true}
+                    shouldAutoFocus={focusValue}
                   />
                 </div>
               </div>
